@@ -99,8 +99,8 @@ class Quill {
       }
     });
     this.emitter.on(Emitter.events.SCROLL_UPDATE, (source, mutations) => {
-      const dataset = mutations[0].target.dataset
-      if (dataset && Boolean(dataset.silent) === true) return
+      const dataset = mutations[0].target.dataset; // eslint-disable-line
+      if (dataset && Boolean(dataset.silent) === true) return;
       const oldRange = this.selection.lastRange;
       const [newRange] = this.selection.getRange();
       const selectionInfo =

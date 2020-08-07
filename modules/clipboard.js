@@ -67,7 +67,7 @@ class Clipboard extends Module {
     this.quill.root.addEventListener('cut', e => this.onCaptureCopy(e, true));
     this.quill.root.addEventListener('paste', this.onCapturePaste.bind(this));
     this.matchers = [];
-    this.disableFormattingOnPaste = this.options.disableFormattingOnPaste
+    this.disableFormattingOnPaste = this.options.disableFormattingOnPaste;
     CLIPBOARD_CONFIG.concat(this.options.matchers).forEach(
       ([selector, matcher]) => {
         this.addMatcher(selector, matcher);
