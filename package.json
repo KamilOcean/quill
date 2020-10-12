@@ -149,7 +149,11 @@
     "trailingComma": "all"
   },
   "scripts": {
+<<<<<<< HEAD
     "build": "npm run build:webpack",
+=======
+    "build": "npm run lint && npm run build:webpack",
+>>>>>>> de5e65d3801ffe58429e0bf56e349eb19720653b
     "build:webpack": "webpack --config _develop/webpack.config.js && rm dist/quill.core dist/quill.bubble dist/quill.snow",
     "build:release": "./_develop/scripts/release.sh",
     "develop": "npm run start",
